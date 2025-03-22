@@ -1,0 +1,285 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/vm1/migration/migration_script.py", line 76, in <module>
+    monitor_and_migrate()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vm1/migration/migration_script.py", line 70, in monitor_and_migrate
+    migrate_to_gcp()
+    ~~~~~~~~~~~~~~^^
+  File "/home/vm1/migration/migration_script.py", line 34, in migrate_to_gcp
+    instance_client = compute_v1.InstancesClient()
+  File "/home/vm1/.local/lib/python3.13/site-packages/google/cloud/compute_v1/services/instances/client.py", line 652, in __init__
+    self._transport = transport_init(
+                      ~~~~~~~~~~~~~~^
+        credentials=credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        api_audience=self._client_options.api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vm1/.local/lib/python3.13/site-packages/google/cloud/compute_v1/services/instances/transports/rest.py", line 2860, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        host=host,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        api_audience=api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vm1/.local/lib/python3.13/site-packages/google/cloud/compute_v1/services/instances/transports/rest_base.py", line 82, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        host=host,
+        ^^^^^^^^^^
+    ...<3 lines>...
+        api_audience=api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vm1/.local/lib/python3.13/site-packages/google/cloud/compute_v1/services/instances/transports/base.py", line 104, in __init__
+    credentials, _ = google.auth.default(
+                     ~~~~~~~~~~~~~~~~~~~^
+        **scopes_kwargs, quota_project_id=quota_project_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vm1/.local/lib/python3.13/site-packages/google/auth/_default.py", line 719, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+CPU Usage: 12.69131176185762%
+2025-03-17 13:44:27,891 - CPU Usage: 11.518164784808476%
+2025-03-17 13:44:37,898 - CPU Usage: 11.518164784808476%
+2025-03-17 13:44:47,908 - CPU Usage: 11.053449685435325%
+2025-03-17 13:44:57,969 - CPU Usage: 11.7459281787918%
+2025-03-17 13:45:07,981 - CPU Usage: 11.745928178791772%
+2025-03-17 13:45:17,992 - CPU Usage: 11.551153955641084%
+2025-03-17 13:45:28,000 - CPU Usage: 11.5410116715138%
+2025-03-17 13:45:38,166 - CPU Usage: 11.5410116715138%
+2025-03-17 13:45:49,074 - CPU Usage: 11.831163818813394%
+2025-03-17 13:45:59,081 - CPU Usage: 11.736425240122145%
+2025-03-17 13:46:09,089 - CPU Usage: 11.736425240122145%
+2025-03-17 13:46:19,102 - CPU Usage: 11.849350886367247%
+2025-03-17 13:46:29,483 - CPU Usage: 11.617170739914812%
+2025-03-17 13:46:39,627 - CPU Usage: 11.617170739914812%
+2025-03-17 13:46:49,674 - CPU Usage: 11.698531760378188%
+2025-03-17 13:46:59,700 - CPU Usage: 12.677835277607102%
+2025-03-17 13:47:09,718 - CPU Usage: 12.677835277607102%
+2025-03-17 13:47:19,831 - CPU Usage: 12.960029781868883%
+2025-03-17 13:47:29,856 - CPU Usage: 13.413217905405375%
+2025-03-17 13:47:39,892 - CPU Usage: 13.41321790540536%
+2025-03-17 13:47:50,010 - CPU Usage: 13.768611564160608%
+2025-03-17 13:48:00,019 - CPU Usage: 13.628006203639302%
+2025-03-17 13:48:10,060 - CPU Usage: 13.628006203639302%
+2025-03-17 13:48:20,222 - CPU Usage: 14.060389143288262%
+2025-03-17 13:48:30,347 - CPU Usage: 13.979230256464078%
+2025-03-17 13:48:40,357 - CPU Usage: 13.979230256464092%
+2025-03-17 13:48:50,370 - CPU Usage: 14.5160667455404%
+2025-03-17 13:49:00,405 - CPU Usage: 13.754443341041636%
+2025-03-17 13:49:10,426 - CPU Usage: 13.75444334104165%
+2025-03-17 13:49:20,433 - CPU Usage: 13.567472579892708%
+2025-03-17 13:49:30,443 - CPU Usage: 11.785241869555136%
+2025-03-17 13:49:40,489 - CPU Usage: 11.785241869555136%
+2025-03-17 13:49:50,494 - CPU Usage: 11.335495283018844%
+2025-03-17 13:50:00,503 - CPU Usage: 11.459466286813054%
+2025-03-17 13:50:10,523 - CPU Usage: 11.459466286813054%
+2025-03-17 13:50:20,527 - CPU Usage: 11.790511018070333%
+2025-03-17 13:50:30,534 - CPU Usage: 12.430389607655371%
+2025-03-17 13:50:40,769 - CPU Usage: 12.940740740740765%
+2025-03-17 13:50:50,781 - CPU Usage: 12.96819354046417%
+2025-03-17 13:51:00,786 - CPU Usage: 13.950028596190265%
+2025-03-17 13:51:10,812 - CPU Usage: 14.37543563049644%
+2025-03-17 13:51:20,817 - CPU Usage: 14.022009354326897%
+2025-03-17 13:51:30,823 - CPU Usage: 13.744698748729363%
+2025-03-17 13:51:41,125 - CPU Usage: 13.262534391812736%
+2025-03-17 13:51:51,136 - CPU Usage: 13.262534391812736%
+2025-03-17 13:52:01,192 - CPU Usage: 13.442712682717968%
+2025-03-17 13:52:11,276 - CPU Usage: 13.622090065435131%
+2025-03-17 13:52:21,286 - CPU Usage: 13.622090065435131%
+2025-03-17 13:52:31,296 - CPU Usage: 13.159741718136033%
+2025-03-17 13:52:41,307 - CPU Usage: 13.16537422365721%
+2025-03-17 13:52:51,320 - CPU Usage: 13.16537422365721%
+2025-03-17 13:53:01,330 - CPU Usage: 13.031578947368544%
+2025-03-17 13:53:11,337 - CPU Usage: 13.053242519624519%
+2025-03-17 13:53:21,752 - CPU Usage: 13.05324251962449%
+2025-03-17 13:53:31,757 - CPU Usage: 12.502982414281789%
+2025-03-17 13:53:41,826 - CPU Usage: 11.811755626107%
+2025-03-17 13:53:51,843 - CPU Usage: 11.811755626107%
+2025-03-17 13:54:01,868 - CPU Usage: 12.22792798800971%
+2025-03-17 13:54:11,882 - CPU Usage: 12.349828776736118%
+2025-03-17 13:54:21,888 - CPU Usage: 12.349828776736118%
+2025-03-17 13:54:31,910 - CPU Usage: 13.188633102107701%
+2025-03-17 13:54:41,915 - CPU Usage: 13.515893930514949%
+2025-03-17 13:54:51,921 - CPU Usage: 13.515893930514949%
+2025-03-17 13:55:01,925 - CPU Usage: 13.951105871786481%
+2025-03-17 13:55:11,940 - CPU Usage: 13.671689970351395%
+2025-03-17 13:55:21,945 - CPU Usage: 13.671689970351395%
+2025-03-17 13:55:31,953 - CPU Usage: 14.541442743485675%
+2025-03-17 13:55:41,976 - CPU Usage: 13.92341106378197%
+2025-03-17 13:55:52,149 - CPU Usage: 13.92341106378197%
+2025-03-17 13:56:02,158 - CPU Usage: 14.590447578904488%
+2025-03-17 13:56:12,183 - CPU Usage: 14.765305692495716%
+2025-03-17 13:56:22,189 - CPU Usage: 14.765305692495716%
+2025-03-17 13:56:32,203 - CPU Usage: 15.35718676994972%
+2025-03-17 13:56:42,210 - CPU Usage: 15.669583646200962%
+2025-03-17 13:56:52,216 - CPU Usage: 15.669583646200962%
+2025-03-17 13:57:02,222 - CPU Usage: 15.717268118103007%
+2025-03-17 13:57:12,229 - CPU Usage: 16.77692882738384%
+2025-03-17 13:57:22,244 - CPU Usage: 16.77692882738384%
+2025-03-17 13:57:32,789 - CPU Usage: 17.96655720220035%
+2025-03-17 13:57:42,799 - CPU Usage: 18.460545198721306%
+2025-03-17 13:57:52,836 - CPU Usage: 18.460545198721306%
+2025-03-17 13:58:02,843 - CPU Usage: 20.481340088983373%
+2025-03-17 13:58:12,866 - CPU Usage: 22.697974378857637%
+2025-03-17 13:58:22,882 - CPU Usage: 22.69797437885765%
+2025-03-17 13:58:32,890 - CPU Usage: 24.94112857659249%
+2025-03-17 13:58:42,896 - CPU Usage: 26.451393323555706%
+2025-03-17 13:58:52,903 - CPU Usage: 26.451393323555692%
+2025-03-17 13:59:02,910 - CPU Usage: 31.073807134385447%
+2025-03-17 13:59:12,919 - CPU Usage: 34.753699161745615%
+2025-03-17 13:59:22,927 - CPU Usage: 34.753699161745615%
+2025-03-17 13:59:32,931 - CPU Usage: 38.922164092955455%
+2025-03-17 13:59:43,016 - CPU Usage: 42.73161762125643%
+2025-03-17 13:59:53,023 - CPU Usage: 42.73161762125641%
+2025-03-17 14:00:03,038 - CPU Usage: 46.062211617747586%
+2025-03-17 14:00:13,053 - CPU Usage: 45.60750221985109%
+2025-03-17 14:00:23,067 - CPU Usage: 45.607502219851106%
+2025-03-17 14:00:33,796 - CPU Usage: 50.21000221054971%
+2025-03-17 14:00:43,834 - CPU Usage: 54.40223436244535%
+2025-03-17 14:00:53,846 - CPU Usage: 54.40223436244535%
+2025-03-17 14:01:03,869 - CPU Usage: 59.25706222621595%
+2025-03-17 14:01:13,875 - CPU Usage: 63.16315789473664%
+2025-03-17 14:01:24,129 - CPU Usage: 63.16315789473664%
+2025-03-17 14:01:34,139 - CPU Usage: 67.41929824561419%
+2025-03-17 14:01:44,153 - CPU Usage: 71.4838637232921%
+2025-03-17 14:01:54,162 - CPU Usage: 71.4838637232921%
+2025-03-17 14:02:04,220 - CPU Usage: 75.2842105263156%
+2025-03-17 14:02:04,224 - High CPU Usage Detected! Initiating Migration...
+2025-03-17 14:25:21,244 - Starting Migration Monitor...
+2025-03-17 14:25:21,253 - CPU Usage: 32.14736842105292%
+2025-03-17 14:25:31,263 - CPU Usage: 33.59847860182951%
+2025-03-17 14:25:41,280 - CPU Usage: 33.78070175438583%
+2025-03-17 14:25:51,486 - CPU Usage: 33.78070175438583%
+2025-03-17 14:26:01,491 - CPU Usage: 34.34522451701176%
+2025-03-17 14:26:11,498 - CPU Usage: 35.00710563713902%
+2025-03-17 14:26:21,506 - CPU Usage: 35.00710563713902%
+2025-03-17 14:26:31,511 - CPU Usage: 35.86747512175937%
+2025-03-17 14:26:41,522 - CPU Usage: 33.35064333559072%
+2025-03-17 14:26:51,528 - CPU Usage: 33.35064333559072%
+2025-03-17 14:27:01,568 - CPU Usage: 30.970175438596286%
+2025-03-17 14:27:11,578 - CPU Usage: 30.25267287266685%
+2025-03-17 14:27:21,585 - CPU Usage: 30.25267287266685%
+2025-03-17 14:27:31,699 - CPU Usage: 34.4109865895677%
+2025-03-17 14:27:41,973 - CPU Usage: 37.01008428129305%
+2025-03-17 14:27:52,028 - CPU Usage: 37.01008428129305%
+2025-03-17 14:28:02,034 - CPU Usage: 41.185964912280745%
+2025-03-17 14:28:12,064 - CPU Usage: 44.77368421052616%
+2025-03-17 14:28:23,214 - CPU Usage: 44.77368421052616%
+2025-03-17 14:28:33,226 - CPU Usage: 48.97719298245584%
+2025-03-17 14:28:43,443 - CPU Usage: 52.21035863283737%
+2025-03-17 14:28:53,453 - CPU Usage: 52.21035863283737%
+2025-03-17 14:29:03,460 - CPU Usage: 55.930133823622164%
+2025-03-17 14:29:13,465 - CPU Usage: 59.34883753570184%
+2025-03-17 14:29:23,477 - CPU Usage: 59.34883753570184%
+2025-03-17 14:29:33,497 - CPU Usage: 63.1610157299899%
+2025-03-17 14:29:43,527 - CPU Usage: 66.83859649122768%
+2025-03-17 14:29:53,534 - CPU Usage: 66.83859649122768%
+2025-03-17 14:30:03,797 - CPU Usage: 68.61425533855876%
+2025-03-17 14:30:14,010 - CPU Usage: 71.5876196056827%
+2025-03-17 14:30:24,116 - CPU Usage: 71.5876196056827%
+2025-03-17 14:30:34,128 - CPU Usage: 74.08088364292183%
+2025-03-17 14:30:44,206 - CPU Usage: 78.4931333815201%
+2025-03-17 14:30:44,304 - High CPU Usage Detected! Initiating Migration...
+2025-03-17 14:40:54,200 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-17 14:40:54,239 - 🚨 Failed to fetch instance group name: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/attributes/instance-group (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa5c1292660>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2025-03-17 14:40:54,283 - CPU Usage: 27.945614035087885%
+2025-03-17 14:41:04,394 - CPU Usage: 28.875438596490937%
+2025-03-17 14:41:14,399 - CPU Usage: 29.96115775844808%
+2025-03-17 14:41:24,405 - CPU Usage: 29.96115775844808%
+2025-03-17 14:41:34,411 - CPU Usage: 29.99298245614021%
+2025-03-17 14:41:44,418 - CPU Usage: 30.547368421052454%
+2025-03-17 14:41:54,426 - CPU Usage: 30.547368421052454%
+2025-03-17 14:42:04,434 - CPU Usage: 31.68070175438595%
+2025-03-17 14:42:14,446 - CPU Usage: 32.64935912505575%
+2025-03-17 14:46:19,097 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-17 14:46:19,109 - CPU Usage: 30.712280701754295%
+2025-03-17 14:46:29,114 - CPU Usage: 31.363880380206282%
+2025-03-17 14:46:39,192 - CPU Usage: 31.363880380206282%
+2025-03-17 14:46:49,206 - CPU Usage: 32.23333333333326%
+2025-03-17 14:46:59,479 - CPU Usage: 35.25415878652218%
+2025-03-17 14:47:09,484 - CPU Usage: 35.25415878652218%
+2025-03-17 14:47:19,704 - CPU Usage: 38.659649122807124%
+2025-03-17 14:47:30,198 - CPU Usage: 42.78461203781041%
+2025-03-17 14:47:40,209 - CPU Usage: 42.78461203781041%
+2025-03-17 14:47:50,229 - CPU Usage: 46.65438596491265%
+2025-03-17 14:48:00,256 - CPU Usage: 50.568941379564706%
+2025-03-17 14:48:10,378 - CPU Usage: 50.56894137956471%
+2025-03-17 14:48:20,389 - CPU Usage: 54.857419551784844%
+2025-03-17 14:48:30,397 - CPU Usage: 59.15657028171642%
+2025-03-17 14:48:40,403 - CPU Usage: 59.15657028171642%
+2025-03-17 14:48:50,411 - CPU Usage: 63.50851584923403%
+2025-03-17 14:49:00,419 - CPU Usage: 67.55823622909263%
+2025-03-17 14:49:10,437 - CPU Usage: 67.55823622909264%
+2025-03-17 14:49:20,446 - CPU Usage: 71.69218785088698%
+2025-03-17 14:49:30,457 - CPU Usage: 75.57543859649134%
+2025-03-17 14:49:30,458 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-17 14:54:19,082 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-17 14:54:19,102 - CPU Usage: 79.61768689342495%
+2025-03-17 14:54:19,104 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-17 14:54:22,021 - 🚨 Failed to scale MIG 'instance-group-1': 404 GET https://compute.googleapis.com/compute/v1/projects/vcc-assignment2-452401/zones/asia-south2-c/instanceGroupManagers/instance-group-1: The resource 'projects/vcc-assignment2-452401/zones/asia-south2-c/instanceGroupManagers/instance-group-1' was not found
+2025-03-17 14:54:52,982 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-17 14:54:52,998 - CPU Usage: 74.47166110520426%
+2025-03-17 14:55:03,022 - CPU Usage: 71.72581975122372%
+2025-03-17 14:55:13,033 - CPU Usage: 69.54035087719285%
+2025-03-17 14:55:23,188 - CPU Usage: 69.54035087719285%
+2025-03-17 14:55:33,198 - CPU Usage: 69.53476703263517%
+2025-03-17 14:55:43,341 - CPU Usage: 69.53003838569549%
+2025-03-17 14:55:53,441 - CPU Usage: 69.53003838569549%
+2025-03-17 14:56:03,448 - CPU Usage: 69.52796325601133%
+2025-03-17 14:56:13,727 - CPU Usage: 69.52807017543851%
+2025-03-17 14:56:24,305 - CPU Usage: 69.52807017543851%
+2025-03-17 14:56:34,340 - CPU Usage: 69.6540665340338%
+2025-03-17 14:56:44,348 - CPU Usage: 69.78761328987135%
+2025-03-17 14:56:54,364 - CPU Usage: 69.78761328987135%
+2025-03-17 14:57:04,379 - CPU Usage: 70.89969368098598%
+2025-03-17 14:57:14,394 - CPU Usage: 74.74061676543764%
+2025-03-17 14:57:24,414 - CPU Usage: 74.74061676543764%
+2025-03-17 14:57:34,424 - CPU Usage: 78.86315789473691%
+2025-03-17 14:57:34,477 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-17 14:57:40,324 - 🚨 Failed to scale MIG 'instance-group-1': 404 GET https://compute.googleapis.com/compute/v1/projects/vcc-assignment2-452401/zones/asia-south2-c/instanceGroupManagers/instance-group-1: The resource 'projects/vcc-assignment2-452401/zones/asia-south2-c/instanceGroupManagers/instance-group-1' was not found
+2025-03-17 15:04:38,698 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-17 15:04:38,735 - CPU Usage: 71.13238926626602%
+2025-03-17 15:04:48,753 - CPU Usage: 68.67861766965989%
+2025-03-17 15:04:58,765 - CPU Usage: 68.67872757001824%
+2025-03-17 15:05:08,775 - CPU Usage: 68.67872757001824%
+2025-03-17 15:05:18,821 - CPU Usage: 68.67894736842126%
+2025-03-17 15:05:29,098 - CPU Usage: 68.67861766965989%
+2025-03-17 15:05:39,279 - CPU Usage: 68.67861766965989%
+2025-03-17 15:05:49,977 - CPU Usage: 68.67861766965989%
+2025-03-17 15:06:00,083 - CPU Usage: 68.67905726646593%
+2025-03-17 15:06:10,129 - CPU Usage: 68.67905726646593%
+2025-03-17 15:06:20,152 - CPU Usage: 68.67872757001824%
+2025-03-17 15:06:30,294 - CPU Usage: 68.67883746960536%
+2025-03-17 15:06:40,362 - CPU Usage: 68.67883746960536%
+2025-03-17 15:06:50,520 - CPU Usage: 68.67861766965989%
+2025-03-17 15:07:00,602 - CPU Usage: 68.67927706024167%
+2025-03-17 15:07:10,621 - CPU Usage: 68.67927706024167%
+2025-03-17 15:07:20,652 - CPU Usage: 68.71392531201897%
+2025-03-17 15:07:30,666 - CPU Usage: 72.37573907398654%
+2025-03-17 15:07:40,685 - CPU Usage: 72.37573907398654%
+2025-03-17 15:07:50,697 - CPU Usage: 75.47261201940317%
+2025-03-17 15:07:50,710 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-17 15:07:59,545 - 🚀 Scaling Managed Instance Group 'instance-group-1' from 1 to 2 instances.
+2025-03-17 15:08:13,494 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-17 15:08:13,509 - CPU Usage: 83.14549575786502%
+2025-03-17 15:08:13,509 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-17 15:08:19,752 - 🚀 Scaling Managed Instance Group 'instance-group-1' from 1 to 2 instances.
+2025-03-21 00:33:43,312 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-21 00:34:03,375 - CPU Usage: 94.49883178919771%
+2025-03-21 00:34:03,375 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-21 00:34:07,368 - 🚀 Scaling Managed Instance Group 'instance-group-1' from 1 to 2 instances.
+2025-03-22 03:50:20,871 - Starting Migration Monitor for Managed Instance Group Scaling...
+2025-03-22 03:50:30,889 - CPU Usage: 96.81216348931254%
+2025-03-22 03:50:30,889 - High CPU Usage Detected! Scaling Managed Instance Group...
+2025-03-22 03:50:35,163 - 🚀 Scaling Managed Instance Group 'instance-group-1' from 1 to 2 instances.
