@@ -241,12 +241,12 @@ gcloud compute instances create gcp-vm \
 
 ## Step 7: Deploy a Sample Application
 Application to show the hostname and it's ip, wherever the script will be running
-### 7.1 Install Flask
+### 7.1 Install streamlit
 ```sh
-pip install flask
+pip install streamlit
 ```
 
-### 7.2 Create a Sample App using(like using python and flask)
+### 7.2 Create a App using(like using python and streamlit)
 - create the directories
 ```sh
 mkdir -p /home/user/app
